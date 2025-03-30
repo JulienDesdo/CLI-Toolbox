@@ -43,7 +43,7 @@ CLI-Toolbox/
   Script issu de la documentation officielle Microsoft pour vérifier la version de .NET installée.  
   Utilisé initialement pour diagnostiquer un souci d’installation avec **IAshell**, qui nécessite .NET Framework.
 
-- [`Get-Software.ps1`](./powershell/Get-Software.ps1)  
+- [`Get-Softwares.ps1`](./powershell/Get-Softwares.ps1)  
   Liste tous les logiciels installés, y compris ceux **non enregistrés dans le panneau de configuration** (ex: exécutables sans installeur).
 
 - [`Check-Ports.ps1`](./powershell/Check-Ports.ps1)  
