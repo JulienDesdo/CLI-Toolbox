@@ -57,27 +57,27 @@ CLI-Toolbox/
   .\Get-Directory.ps1 [-l <profondeur>] [-ext ext1,ext2,...] [-f @(file1, file2, ...)]
   ```
   
-  Exemples :
+  **Exemples :**
   Afficher tous les fichiers du répertoire courant :
   ```
   .\Get-Directory.ps1
   ```
   Afficher les fichiers .ps1 et .txt jusqu’à 2 niveaux :
-  ```powershell
+  ```
   .\Get-Directory.ps1 -ext ps1,txt -l 2
-  ```powershell
+  ```
   Afficher deux fichiers précis (y compris avec espaces) :
-  ```powershell
+  ```
   .\Get-Directory.ps1 -f @("README.md", "I WSL NAND WINDOWS.txt")
-  ```powershell
+  ```
   Affichage (rendu terminal) : 
-  ```powershell
+  ```
   ===== Fichier: fichier1.extension1 =====
   Contenu
   ===== Fichier: fichier2.extension2 =====
   Contenu
   ...
   Output copied to clipboard!
-  ```powershell
+  ```
   
   🔤 Encodage : testé pour l'UTF-8
