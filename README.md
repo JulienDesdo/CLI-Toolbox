@@ -53,15 +53,15 @@ CLI-Toolbox/
   Affiche le contenu d’un ou plusieurs fichiers en format lisible, permet de filtrer par **profondeur**,
   **extension** ou **fichiers spécifiques**. Le résutat de la commande est copié dans le clipboard.
   
-  ```powershell
+  ```
   .\Get-Directory.ps1 [-l <profondeur>] [-ext ext1,ext2,...] [-f @(file1, file2, ...)]
-  ```powershell
+  ```
   
   Exemples :
   Afficher tous les fichiers du répertoire courant :
-  ```powershell
+  ```
   .\Get-Directory.ps1
-  ```powershell
+  ```
   Afficher les fichiers .ps1 et .txt jusqu’à 2 niveaux :
   ```powershell
   .\Get-Directory.ps1 -ext ps1,txt -l 2
