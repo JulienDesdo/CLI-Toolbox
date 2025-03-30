@@ -81,4 +81,4 @@ CLI-Toolbox/
   Output copied to clipboard!
   ```
   
-  🔤 Encodage : testé pour l'UTF-8
+  🔤 Encodage vérifié : UTF-8
