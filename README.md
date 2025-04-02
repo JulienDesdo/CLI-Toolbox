@@ -85,6 +85,8 @@ CLI-Toolbox/
   
   🔤 Encodage vérifié : UTF-8
 
+---
+
 ### 🐍 Python (`python/`)
 
 - [`random-pypi.py`](./python/random-pypi.py)
@@ -93,6 +95,8 @@ CLI-Toolbox/
   Exemple d’utilisation :
   ```
   > python random-pypi.py  
-  🎲 Paquet aléatoire : catsay  
-  🔗 https://pypi.org/project/catsay/
+  🎲 Paquet aléatoire : automate3chapter3
+  🔗 https://pypi.org/project/automate3chapter3/
+  📖 Description : This is a placeholder package that installs nothing, but prevents typo squatting.
   ```
+---
