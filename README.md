@@ -20,6 +20,8 @@ CLI-Toolbox/
 │   └── *.sh
 ├── powershell/
 │   └── *.ps1
+├── python/
+│   └── *.py
 ```
 
 ---
@@ -82,3 +84,15 @@ CLI-Toolbox/
   ```
   
   🔤 Encodage vérifié : UTF-8
+
+### 🐍 Python (`python/`)
+
+- [`random-pypi.py`](./python/random-pypi.py)
+  Tire un paquet aléatoire depuis le registre PyPI. Idéal pour découvrir des bibliothèques insolites, explorer l’écosystème Python ou juste rigoler un coup.
+  
+  Exemple d’utilisation :
+  ```
+  > python random-pypi.py  
+  🎲 Paquet aléatoire : catsay  
+  🔗 https://pypi.org/project/catsay/
+  ```
