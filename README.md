@@ -100,12 +100,13 @@ CLI-Toolbox/
   📖 Description : This is a placeholder package that installs nothing, but prevents typo squatting.
   ```
 
- - [`AV-Check.py`](./python/AV-Check.py)
-Liste les processus système en cours et les compare contre une liste d'exécutables d'antivirus connus. Permet de savoir si un AV est actif ou non.
+- [`AV-Check.py`](./python/AV-Check.py)
+  Liste les processus système en cours et les compare contre une liste d'exécutables d'antivirus connus. Permet de savoir si un AV est actif ou non.
+
   Dépendance :
-```
-pip install psutil
-```
+  ```
+  pip install psutil
+  ```
 
   Exemple d’utilisation :
   ```
