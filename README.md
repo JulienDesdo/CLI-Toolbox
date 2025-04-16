@@ -99,4 +99,21 @@ CLI-Toolbox/
   🔗 https://pypi.org/project/automate3chapter3/
   📖 Description : This is a placeholder package that installs nothing, but prevents typo squatting.
   ```
+
+ - [`AV-Check.py`](./python/AV-Check.py)
+Liste les processus système en cours et les compare contre une liste d'exécutables d'antivirus connus. Permet de savoir si un AV est actif ou non.
+  Dépendance :
+```
+pip install psutil
+```
+
+  Exemple d’utilisation :
+  ```
+  > python AV-Check.py  
+  [+] Antivirus check is running ..
+
+  -- AV Found: MsMpEng.exe
+  ```
 ---
+
+
