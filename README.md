@@ -22,6 +22,8 @@ CLI-Toolbox/
 │   └── *.ps1
 ├── python/
 │   └── *.py
+├── R/
+│   └── *.R
 ```
 
 ---
@@ -164,4 +166,22 @@ CLI-Toolbox/
   
 ---
 
+### ®️ R (`R/`)
+
+- [`dsa.R`](./R/dsa.R)
+  Analyse un fichier CSV et affiche un résumé du dataset (dimensions, colonnes, types, valeurs manquantes, stats générales).
+
+  Exemple :
+  ```
+  Rscript dsa.R data.csv
+  Rscript dsa.R data.csv --deep
+  ```
+  💡 En mode --deep, le script identifie aussi :
+    - les colonnes constantes ou uniques,
+    - les top valeurs des colonnes textuelles,
+    - les valeurs aberrantes (z-score > 3),
+    - les corrélations entre variables numériques.
+
+  Dépendance : R (disponible via Rscript)
+  📍 Pense à ajouter Rscript.exe au PATH si R est installé dans Program Files\R\R-x.x.x\bin
 
