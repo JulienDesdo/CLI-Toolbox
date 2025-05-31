@@ -182,6 +182,5 @@ CLI-Toolbox/
     - les valeurs aberrantes (z-score > 3),
     - les corrélations entre variables numériques.
 
-  Dépendance : R (disponible via Rscript)
   📍 Pense à ajouter Rscript.exe au PATH si R est installé dans Program Files\R\R-x.x.x\bin
 
