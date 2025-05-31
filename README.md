@@ -148,6 +148,19 @@ CLI-Toolbox/
   ```
   
   **⚠️ Remarque :** Ce script interroge l'API de PyPI pour chaque paquet installé. Sur de très grosses installations, cela peut entraîner un ralentissement ou un blocage temporaire dû aux limites de requêtes (rate limiting).
+
+- [`csv-to-markdown.py`](./python/find-obsolete-packages.py)
+  Affiche un fichier CSV sous forme de tableau Markdown dans le terminal.
+
+  Exemple :
+  ```
+  python csv-to-markdown.py data.csv
+  ```
+  Dépendance :
+  ```
+  pip install pandas
+  ```
+💡 Petite commande toute simple… mais avec plein de pistes d’évolution possibles : support d'autres formats (Excel, TSV), aperçu, export JSON, copie auto, etc. Une bonne base pour une vraie mini-toolbox dédiée aux tableaux.
   
 ---
 
