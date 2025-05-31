@@ -115,6 +115,40 @@ CLI-Toolbox/
 
   -- AV Found: MsMpEng.exe
   ```
+- [`find-obsolete-packages.py`](./python/find-obsolete-packages.py)
+  Vérifie quels paquets Python installés localement n'ont pas été mis à jour depuis un certain nombre d’années.
+
+  Dépendances :
+  ```
+  pip install tqdm
+  ```
+  Exemple d’utilisation :
+  ```
+  python find-obsolete-packages.py
+  ```
+
+  ```
+  python find-obsolete-packages.py --years 3
+  ```
+
+  ```
+  python .\find-obsolete-packages.py --years 5
+  Analyzing 198 installed packages (threshold: 5 year(s))...
+  
+  Checking packages: 100%|█████████████████████████████████████████████████████████████| 198/198 [00:49<00:00,  4.02it/s]
+  
+  --- Results ---
+  Found 5 obsolete package(s) (not updated in 5+ years):
+  
+  - webencodings (last updated 8 years ago)
+  - astunparse (last updated 5 years ago)
+  - plotly-express (last updated 5 years ago)
+  - google-pasta (last updated 5 years ago)
+  - rfc3986-validator (last updated 5 years ago)
+  ```
+  
+  **⚠️ Remarque :** Ce script interroge l'API de PyPI pour chaque paquet installé. Sur de très grosses installations, cela peut entraîner un ralentissement ou un blocage temporaire dû aux limites de requêtes (rate limiting).
+  
 ---
 
 
