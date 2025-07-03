@@ -164,7 +164,7 @@ CLI-Toolbox/
   ```
 💡 Petite commande toute simple… mais avec plein de pistes d’évolution possibles : support d'autres formats (Excel, TSV), aperçu, export JSON, copie auto, etc. Une bonne base pour une vraie mini-toolbox dédiée aux tableaux.
 
-- [`explore-module.py`](./python/explore-module.py)  
+- [`explore-module.py`](./python/explore_module.py)  
   Explore n’importe quel module Python installé localement pour en extraire les **fonctions, classes et objets publics**.  
   Peut trier les fonctions soit **alphabétiquement** (par défaut), soit par **pertinence estimée** (`--scored`).  
   Très utile pour obtenir un **résumé rapide** d’un module sans aller lire la documentation.
