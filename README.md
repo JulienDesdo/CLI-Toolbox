@@ -87,6 +87,23 @@ CLI-Toolbox/
   
   🔤 Encodage vérifié : UTF-8
 
+  - [`launch-vhdl.ps1`](./powershell/launch-vhdl.ps1)  
+  Script générique pour **compiler, simuler et visualiser un projet VHDL** avec [GHDL](https://ghdl.github.io/ghdl/) et [GTKWave](http://gtkwave.sourceforge.net/).
+  ```
+  .\launch-vhdl.ps1 -Design <design.vhd> -Testbench <tb_design.vhd> [-StopTime <temps>]
+  ```
+  Exemples :
+  Simulation d’un latch avec 500 ns par défaut :
+  ```
+  .\launch-vhdl.ps1 -Design d_latch.vhd -Testbench tb_xcomp.vhd
+  ```
+  Simulation d’un XOR avec une durée de 1 µs :
+  ```
+  .\launch-vhdl.ps1 -Design xor_gate.vhd -Testbench tb_xor.vhd -StopTime 1us
+  ```
+  👉 Si un fichier .gtkw portant le même nom que le testbench est présent (ex: tb_xcomp.gtkw), il est utilisé automatiquement pour afficher les signaux dans GTKWave.
+
+
 ---
 
 ### 🐍 Python (`python/`)
