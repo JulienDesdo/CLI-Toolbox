@@ -87,7 +87,7 @@ CLI-Toolbox/
   
   🔤 Encodage vérifié : UTF-8
 
-  - [`launch-vhdl.ps1`](./powershell/launch-vhdl.ps1)  
+- [`launch-vhdl.ps1`](./powershell/launch-vhdl.ps1)  
   Script générique pour **compiler, simuler et visualiser un projet VHDL** avec [GHDL](https://ghdl.github.io/ghdl/) et [GTKWave](http://gtkwave.sourceforge.net/).
   ```
   .\launch-vhdl.ps1 -Design <design.vhd> -Testbench <tb_design.vhd> [-StopTime <temps>]
