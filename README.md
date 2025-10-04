@@ -13,10 +13,10 @@ L’objectif est d’avoir une **boîte à outils simple, rapide à utiliser**, 
 ---
 ## 📚 Sommaire
 - [Structure](#structure)
-- [Scripts Bash](#🐧-bash-bash)
-- [Scripts PowerShell](#🪟-powershell-powershell)
-- [Scripts Python](#🐍-python-python)
-- [Scripts R](#®️-r-r)
+- [Scripts Bash](#bash-bash)
+- [Scripts PowerShell](#powershell-powershell)
+- [Scripts Python](#python-python)
+- [Scripts R](#r-r)
 ---
 
 ## 📁 Structure
