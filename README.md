@@ -19,7 +19,7 @@ L’objectif est d’avoir une **boîte à outils simple, rapide à utiliser**, 
 - [Scripts R](#r-r)
 ---
 
-## Structure 📁
+## Structure
 
 ```
 CLI-Toolbox/
