@@ -9,6 +9,14 @@ Ce dépôt rassemble des scripts que j’ai :
 
 L’objectif est d’avoir une **boîte à outils simple, rapide à utiliser**, multiplateforme (Linux & Windows), évolutive et documentée.
 
+
+---
+## 📚 Sommaire
+- [Structure](#structure)
+- [Scripts Bash](#🐧-bash-bash)
+- [Scripts PowerShell](#🪟-powershell-powershell)
+- [Scripts Python](#🐍-python-python)
+- [Scripts R](#®️-r-r)
 ---
 
 ## 📁 Structure
