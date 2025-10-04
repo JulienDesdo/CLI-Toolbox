@@ -12,14 +12,14 @@ L’objectif est d’avoir une **boîte à outils simple, rapide à utiliser**, 
 
 ---
 ## 📚 Sommaire
-- [Structure](#structure)
+- [Structure](#structure-structure)
 - [Scripts Bash](#bash-bash)
 - [Scripts PowerShell](#powershell-powershell)
 - [Scripts Python](#python-python)
 - [Scripts R](#r-r)
 ---
-
-## Structure
+<a name="structure-structure"></a>
+## 📁 Structure
 
 ```
 CLI-Toolbox/
@@ -37,7 +37,7 @@ CLI-Toolbox/
 ---
 
 ## 🧩 Contenu du dépôt
-
+<a name="bash-bash"></a>
 ### 🐧 Bash (`bash/`)
 
 - [`install_docker.sh`](./bash/install_docker.sh)  
