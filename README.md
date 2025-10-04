@@ -48,7 +48,7 @@ CLI-Toolbox/
   Génére un rapport système dans `/var/log/system_reports`, contenant l’usage disque, mémoire, et l’uptime.
 
 ---
-
+<a name="powershell-powershell"></a>
 ### 🪟 PowerShell (`powershell/`)
 
 - [`Check-DotNetVersion.ps1`](./powershell/Check-DotNetVersion.ps1)  
@@ -113,7 +113,7 @@ CLI-Toolbox/
 
 
 ---
-
+<a name="python-python"></a>
 ### 🐍 Python (`python/`)
 
 - [`random-pypi.py`](./python/random-pypi.py)
@@ -237,7 +237,7 @@ CLI-Toolbox/
    💡Evolutions possibles : selection de plusieurs page à la fois; ajout glisser-déposer tkinter; ajout d’un mode batch pour signer plusieurs documents à la suite.
   
 ---
-
+<a name="r-r"></a>
 ### ®️ R (`R/`)
 
 - [`dsa.R`](./R/dsa.R)
