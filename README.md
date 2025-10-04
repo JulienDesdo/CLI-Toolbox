@@ -194,6 +194,39 @@ CLI-Toolbox/
   # Exploration avec tri par pertinence heuristique
   python explore-module.py numpy --scored
   ```
+
+ - [`signer.py`](./python/signer.py)
+   Automatise le processus fastidieux de signature manuelle de documents PDF sans passer par des services en ligne.
+   Ce script permet :
+         d’**extraire une page spécifique d’un PDF** pour impression et signature ;
+         puis de **réinsérer la version signée** à la bonne place dans le document d’origine ;
+         le tout **hors-ligne**, en local, avec PyPDF2
+   Dépendance : 
+   ```
+   pip install PyPDF2
+   ```
+   Exemples.
+   Extrait la page 5 du fichier contrat.pdf et la sauvegarde dans contrat_page_5.pdf : 
+   ```
+   python signer.py --input contrat.pdf --page 5 --extract-only
+   ```
+   Tu peux ensuite imprimer et signer cette page manuellement, puis la scanner sous le nom page_signee.pdf.
+   
+   Réinsérer la page signée
+   ```
+   python signer.py --input contrat.pdf --page 5 --signed page_signee.pdf --output contrat_signe.pdf
+   ```
+   Le fichier final (contrat_signe.pdf) conserve toutes les autres pages intactes.
+
+
+   Options possibles :
+   **--input**	Chemin vers le PDF original
+   **--page**	Numéro de la page à extraire ou remplacer (1-indexé)
+   **--signed**	Fichier PDF contenant la page signée (une seule page)
+   **--output**	Nom du fichier PDF final (par défaut : <nom>_signed.pdf)
+   **--extract-only**	Extrait uniquement la page spécifiée sans la remplacer
+
+   💡Evolutions possibles : selection de plusieurs page à la fois; ajout glisser-déposer tkinter; ajout d’un mode batch pour signer plusieurs documents à la suite.
   
 ---
 
