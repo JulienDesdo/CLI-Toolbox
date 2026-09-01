@@ -194,6 +194,66 @@ CLI-Toolbox/
   # Exploration avec tri par pertinence heuristique
   python explore-module.py numpy --scored
   ```
+
+- [`path-doctor.py`](./python/path-doctor.py)
+
+  Analyse la variable d'environnement `PATH` et permet de diagnostiquer rapidement les problèmes liés à la résolution des commandes.
+
+  Sans argument, le script :
+
+  * affiche les différents répertoires présents dans le `PATH`,
+  * détecte les répertoires inexistants,
+  * détecte les entrées dupliquées.
+
+  Exemple d'utilisation :
+
+  ```bash
+  python path-doctor.py
+  ```
+
+  Il est également possible de rechercher une commande précise afin de voir toutes les occurrences correspondantes présentes dans le `PATH` :
+
+  ```bash
+  python path-doctor.py python
+  ```
+
+  Exemple de sortie :
+
+  ```text
+  +----------------------------------+
+  |           PATH DOCTOR            |
+  +----------------------------------+
+
+  Command: python
+
+    1. C:\Python312\python.exe <- ACTIVE
+       Python 3.12.5
+
+    2. C:\Python311\python.exe
+       Python 3.11.9
+
+    3. C:\Users\User\AppData\Local\Microsoft\WindowsApps\python.exe
+       unknown
+  ```
+
+  L'exécutable marqué `ACTIVE` correspond à celui qui sera réellement lancé lorsque la commande est saisie dans le terminal.
+
+  Plusieurs commandes peuvent être vérifiées en une seule fois :
+
+  ```bash
+  python path-doctor.py python java gcc git
+  ```
+
+  Pour CUDA, par exemple, il faut rechercher le nom réel de la commande concernée :
+
+  ```bash
+  python path-doctor.py nvcc
+  ```
+
+  Le script utilise l'ordre réel du `PATH` pour retrouver les différentes occurrences d'une commande et utilise la résolution du système pour identifier celle qui est effectivement active.
+
+  Aucune dépendance externe n'est nécessaire.
+
   
 ---
 
