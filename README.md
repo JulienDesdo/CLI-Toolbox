@@ -9,8 +9,16 @@ Ce dépôt rassemble des scripts que j’ai :
 
 L’objectif est d’avoir une **boîte à outils simple, rapide à utiliser**, multiplateforme (Linux & Windows), évolutive et documentée.
 
----
 
+---
+## 📚 Sommaire
+- [Structure](#structure-structure)
+- [Scripts Bash](#bash-bash)
+- [Scripts PowerShell](#powershell-powershell)
+- [Scripts Python](#python-python)
+- [Scripts R](#r-r)
+---
+<a name="structure-structure"></a>
 ## 📁 Structure
 
 ```
@@ -29,7 +37,7 @@ CLI-Toolbox/
 ---
 
 ## 🧩 Contenu du dépôt
-
+<a name="bash-bash"></a>
 ### 🐧 Bash (`bash/`)
 
 - [`install_docker.sh`](./bash/install_docker.sh)  
@@ -40,7 +48,7 @@ CLI-Toolbox/
   Génére un rapport système dans `/var/log/system_reports`, contenant l’usage disque, mémoire, et l’uptime.
 
 ---
-
+<a name="powershell-powershell"></a>
 ### 🪟 PowerShell (`powershell/`)
 
 - [`Check-DotNetVersion.ps1`](./powershell/Check-DotNetVersion.ps1)  
@@ -105,7 +113,7 @@ CLI-Toolbox/
 
 
 ---
-
+<a name="python-python"></a>
 ### 🐍 Python (`python/`)
 
 - [`random-pypi.py`](./python/random-pypi.py)
@@ -195,68 +203,41 @@ CLI-Toolbox/
   python explore-module.py numpy --scored
   ```
 
-- [`path-doctor.py`](./python/path-doctor.py)
+ - [`signer.py`](./python/signer.py)
+   Automatise le processus fastidieux de signature manuelle de documents PDF sans passer par des services en ligne.
+   Ce script permet :
+         d’**extraire une page spécifique d’un PDF** pour impression et signature ;
+         puis de **réinsérer la version signée** à la bonne place dans le document d’origine ;
+         le tout **hors-ligne**, en local, avec PyPDF2
+   Dépendance : 
+   ```
+   pip install PyPDF2
+   ```
+   Exemples.
+   Extrait la page 5 du fichier contrat.pdf et la sauvegarde dans contrat_page_5.pdf : 
+   ```
+   python signer.py --input contrat.pdf --page 5 --extract-only
+   ```
+   Tu peux ensuite imprimer et signer cette page manuellement, puis la scanner sous le nom page_signee.pdf.
+   
+   Réinsérer la page signée
+   ```
+   python signer.py --input contrat.pdf --page 5 --signed page_signee.pdf --output contrat_signe.pdf
+   ```
+   Le fichier final (contrat_signe.pdf) conserve toutes les autres pages intactes.
 
-  Analyse la variable d'environnement `PATH` et permet de diagnostiquer rapidement les problèmes liés à la résolution des commandes.
 
-  Sans argument, le script :
+   Options possibles :
+   **--input**	Chemin vers le PDF original
+   **--page**	Numéro de la page à extraire ou remplacer (1-indexé)
+   **--signed**	Fichier PDF contenant la page signée (une seule page)
+   **--output**	Nom du fichier PDF final (par défaut : <nom>_signed.pdf)
+   **--extract-only**	Extrait uniquement la page spécifiée sans la remplacer
 
-  * affiche les différents répertoires présents dans le `PATH`,
-  * détecte les répertoires inexistants,
-  * détecte les entrées dupliquées.
-
-  Exemple d'utilisation :
-
-  ```bash
-  python path-doctor.py
-  ```
-
-  Il est également possible de rechercher une commande précise afin de voir toutes les occurrences correspondantes présentes dans le `PATH` :
-
-  ```bash
-  python path-doctor.py python
-  ```
-
-  Exemple de sortie :
-
-  ```text
-  +----------------------------------+
-  |           PATH DOCTOR            |
-  +----------------------------------+
-
-  Command: python
-
-    1. C:\Python312\python.exe <- ACTIVE
-       Python 3.12.5
-
-    2. C:\Python311\python.exe
-       Python 3.11.9
-
-    3. C:\Users\User\AppData\Local\Microsoft\WindowsApps\python.exe
-       unknown
-  ```
-
-  L'exécutable marqué `ACTIVE` correspond à celui qui sera réellement lancé lorsque la commande est saisie dans le terminal.
-
-  Plusieurs commandes peuvent être vérifiées en une seule fois :
-
-  ```bash
-  python path-doctor.py python java gcc git
-  ```
-
-  Pour CUDA, par exemple, il faut rechercher le nom réel de la commande concernée :
-
-  ```bash
-  python path-doctor.py nvcc
-  ```
-
-  Le script utilise l'ordre réel du `PATH` pour retrouver les différentes occurrences d'une commande et utilise la résolution du système pour identifier celle qui est effectivement active.
-
-  Aucune dépendance externe n'est nécessaire.
-
+   💡Evolutions possibles : selection de plusieurs page à la fois; ajout glisser-déposer tkinter; ajout d’un mode batch pour signer plusieurs documents à la suite.
   
 ---
-
+<a name="r-r"></a>
 ### ®️ R (`R/`)
 
 - [`dsa.R`](./R/dsa.R)
