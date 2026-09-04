@@ -47,6 +47,104 @@ CLI-Toolbox/
 - [`system-report.sh`](./bash/system-report.sh)  
   Génére un rapport système dans `/var/log/system_reports`, contenant l’usage disque, mémoire, et l’uptime.
 
+- [`jump.sh`](./bash/jump.sh)
+  Gestionnaire de raccourcis de navigation pour Bash. Permet d’associer un nom à un dossier puis de s’y déplacer depuis n’importe où avec une commande courte.
+
+  **Installation :**
+
+  ```bash
+  chmod +x bash/jump.sh
+  ./bash/jump.sh --install
+  source ~/.bashrc
+  ```
+
+  L’installation copie le script dans :
+
+  ```text
+  ~/.local/share/cli-toolbox/jump.sh
+  ```
+
+  et ajoute automatiquement à `~/.bashrc` :
+
+  ```bash
+  source "$HOME/.local/share/cli-toolbox/jump.sh"
+  ```
+
+  `jump` est chargé comme une fonction Bash afin de pouvoir modifier directement le répertoire courant du terminal.
+
+  **Ajouter le dossier courant :**
+
+  ```bash
+  cd ~/Documents/projects/CLI-Toolbox
+  jump add toolbox
+  ```
+
+  **Ajouter un chemin explicitement :**
+
+  ```bash
+  jump add downloads ~/Downloads
+  ```
+
+  **Se déplacer vers un bookmark :**
+
+  ```bash
+  jump toolbox
+  ```
+
+  **Lister les bookmarks :**
+
+  ```bash
+  jump list
+  ```
+
+  Exemple :
+
+  ```text
+  NAME                 PATH
+  -------------------- ----
+  toolbox              /home/user/Documents/projects/CLI-Toolbox
+  downloads            /home/user/Downloads
+  ```
+
+  **Supprimer un bookmark :**
+
+  ```bash
+  jump remove toolbox
+  ```
+
+  Les bookmarks sont stockés dans :
+
+  ```text
+  ~/.config/jump/bookmarks.tsv
+  ```
+
+  **Mettre à jour `jump` :**
+
+  Après avoir modifié ou récupéré une nouvelle version du script :
+
+  ```bash
+  ./bash/jump.sh --install
+  ```
+
+  L’installation existante est remplacée par la nouvelle version.
+
+  **Désinstallation :**
+
+  ```bash
+  ~/.local/share/cli-toolbox/jump.sh --uninstall
+  ```
+
+  Cette commande retire `jump` de `.bashrc` et supprime le script installé, mais conserve les bookmarks.
+
+  **Suppression complète :**
+
+  ```bash
+  ~/.local/share/cli-toolbox/jump.sh --purge
+  ```
+
+  `--purge` supprime également les bookmarks enregistrés.
+
+
 ---
 <a name="powershell-powershell"></a>
 ### 🪟 PowerShell (`powershell/`)
