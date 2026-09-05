@@ -30,6 +30,8 @@ CLI-Toolbox/
 │   └── *.ps1
 ├── python/
 │   └── *.py
+├── rust/
+│   └── *.rs
 ├── R/
 │   └── *.R
 ```
@@ -394,7 +396,23 @@ CLI-Toolbox/
   Le script utilise l'ordre réel du `PATH` pour retrouver les différentes occurrences d'une commande et utilise la résolution du système pour identifier celle qui est effectivement active.
 
   Aucune dépendance externe n'est nécessaire.
-  
+---
+### 🦀 Rust (rust/)
+
+- [`largest.rs`]
+  Recherche récursivement les plus gros fichiers d’un dossier et affiche leur taille dans un format lisible.
+	```
+	rustc rust/largest.rs -O -o largest
+	./largest ~/Downloads 10
+	```
+- [`utf8-check.rs`]
+  Vérifie si le contenu d’un fichier est un texte UTF-8 valide et indique la position du premier octet invalide.
+        ```
+	rustc rust/utf8-check.rs -O -o utf8-check
+	./utf8-check README.md
+        ```
+Les deux outils utilisent uniquement la bibliothèque standard Rust et ne nécessitent donc pas de projet Cargo ni de dépendances externes.
+
 ---
 <a name="r-r"></a>
 ### ®️ R (`R/`)
