@@ -399,18 +399,18 @@ CLI-Toolbox/
 ---
 ### 🦀 Rust (rust/)
 
-- [`largest.rs`]
+- [`largest.rs`](./rust/largest.rs)
   Recherche récursivement les plus gros fichiers d’un dossier et affiche leur taille dans un format lisible.
-	```
-	rustc rust/largest.rs -O -o largest
-	./largest ~/Downloads 10
-	```
-- [`utf8-check.rs`]
+  ```
+  rustc rust/largest.rs -O -o largest
+  ./largest ~/Downloads 10
+  ```
+- [`utf8-check.rs`](./rust/utf8-check.rs)
   Vérifie si le contenu d’un fichier est un texte UTF-8 valide et indique la position du premier octet invalide.
-        ```
-	rustc rust/utf8-check.rs -O -o utf8-check
-	./utf8-check README.md
-        ```
+  ```
+  rustc rust/utf8-check.rs -O -o utf8-check
+  ./utf8-check README.md
+  ```
 Les deux outils utilisent uniquement la bibliothèque standard Rust et ne nécessitent donc pas de projet Cargo ni de dépendances externes.
 
 ---
